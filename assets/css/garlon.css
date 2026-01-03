@@ -11766,6 +11766,7 @@ body.megamenu-popup-active .mobile-nav__content {
 .faq-one .faq-one__content__thumb img {
   object-fit: cover;
   width: 100%;
+  height: 300px;
 }
 
 .faq-four {
@@ -15293,6 +15294,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .about-one__content__text {
   margin-bottom: 30px;
+  text-align: justify;
 }
 @media (min-width: 992px) {
   .about-one__content__text {
