@@ -58,7 +58,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6); /* adjust 0.4–0.7 */
+    background: rgba(26, 24, 24, 0.6); /* adjust 0.4–0.7 */
     z-index: 1;
 }
 
@@ -83,6 +83,7 @@
 
 .hero-static__form h3 {
     margin-bottom: 25px;
+    color:white;
 }
 
 .contact-form input,
@@ -4091,6 +4092,7 @@ p {
   position: relative;
   z-index: 999;
   background-color: transparent;
+  /* background-color: white; */
 }
 .main-header__inner {
   display: flex;
@@ -4117,6 +4119,7 @@ p {
 .main-header__info a {
   font-size: 22px;
   color: var(--garlon-white, #fff);
+  /* color:#000; */
   transition: all 500ms ease;
   line-height: 1em;
   position: relative;
@@ -4622,6 +4625,7 @@ p {
   align-items: center;
   transition: all 500ms ease;
   color: var(--garlon-white, #fff);
+/* color:black; */
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
