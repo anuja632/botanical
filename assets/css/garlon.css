@@ -4309,7 +4309,7 @@ p {
   margin-left: 0;
 }
 .main-header--three {
-  padding: 24px 0 0px;
+  padding:0px;
   margin-bottom: -105px;
 }
 .main-header--three::after {
@@ -4383,7 +4383,7 @@ p {
   color: var(--garlon-white, #fff);
 }
 .main-header--three .main-header__inner {
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 .main-header--three .main-header__bottom {
   padding-left: 24px;
