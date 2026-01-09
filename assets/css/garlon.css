@@ -6963,12 +6963,10 @@ body.megamenu-popup-active .mobile-nav__content {
 .cta-footer-two__bg::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(var(--garlon-base-rgb, 32, 157, 47), 0.8);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
 }
+
 .cta-footer-two__bg::before {
   content: "";
   position: absolute;
@@ -18684,5 +18682,106 @@ svg {
 
   .franchise-image {
     height: 350px;
+  }
+}
+
+
+.drherbi-franchise {
+  background-image: url('https://img.freepik.com/premium-photo/top-view-image-herbal-tea-bags-with-dried-leaves-centered-label-concept-herbal-tea-tea-bags-dried-leaves-top-view-image-centered-label_864588-189428.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  position: relative;
+}
+
+/* Dark overlay for text readability */
+.drherbi-franchise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* Keep content above overlay */
+.drherbi-franchise .franchise-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.franchise-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* LEFT CONTENT */
+.franchise-content h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.franchise-content h3 {
+  /* font-size: 18px; */
+  color:white;
+  margin-bottom: 20px;
+}
+
+.franchise-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* FORM */
+.franchise-form {
+  background: #f7f5dc;
+  padding: 35px;
+  border-radius: 6px;
+}
+
+.franchise-form h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.franchise-form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.franchise-form input,
+.franchise-form select,
+.franchise-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.franchise-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .franchise-wrapper {
+    grid-template-columns: 1fr;
   }
 }
