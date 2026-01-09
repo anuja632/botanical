@@ -486,6 +486,7 @@ body {
   font-size: 16px;
   line-height: 1.875;
   font-weight: 400;
+
 }
 
 body.locked {
@@ -4576,7 +4577,8 @@ align-content: center;
 .mobile-nav__btn span {
   width: 100%;
   height: 2px;
-  background-color: var(--garlon-white, #fff);
+  background-color: var(--garlon-text-dark, #222222);
+
 }
 .mobile-nav__btn span:nth-child(2) {
   margin-top: 4px;
@@ -14259,6 +14261,9 @@ background-image: url('../images/shapes/history-2-1.png');
     justify-content: start;
     align-items: start;
   }
+  .productimg{
+  height:auto;
+}
 }
 .hero-three__btn .garlon-btn {
   background-color: var(--garlon-white, #fff);
