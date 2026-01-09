@@ -68,82 +68,70 @@
 
     <!-- Page Wrapper -->
     <div class="page-wrapper">
-<header class="main-header main-header--one sticky-header sticky-header--normal">
-    <div class="container-fluid">
-        <div class="main-header__inner">
+        <header class="main-header main-header--one sticky-header sticky-header--normal">
+            <div class="container-fluid">
+                <div class="main-header__inner">
+                    <div class="main-header__logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.png" alt="Garlon HTML" width="223">
+                        </a>
+                    </div><!-- /.main-header__logo -->
+                    <nav class="main-header__nav main-menu">
+                         <ul class="main-menu__list">
 
-            <!-- LOGO -->
-            <div class="main-header__logo">
-                <a href="index.html">
-                    <img src="assets/images/logo.png" alt="Dr. Herbi" width="223">
-                </a>
-            </div>
+        <!-- Home -->
+        <li>
+            <a href="index.html">Home</a>
+        </li>
 
-            <!-- NAVIGATION -->
-            <nav class="main-header__nav main-menu">
-                <ul class="main-menu__list">
+        <!-- Products -->
+        <li class="dropdown">
+            <a href="products.html">Products</a>
+            <ul>
+                <li><a href="products.html">All Products</a></li>
+                <li><a href="product-details.html">Product Detail</a></li>
+            </ul>
+        </li>
 
-                    <!-- DEMOS -->
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
+        <!-- Partner With Us -->
+        <li>
+            <a href="partnerwithus.html">Partner With Us</a>
+        </li>
 
-                    <li><a href="about.html">About</a></li>
+        <!-- Gallery -->
+        <li>
+            <a href="gallery.html">Gallery</a>
+        </li>
 
-                                                  <li><a href="gallery-grid.html">Gallery</a></li>
+        <!-- About -->
+        <li>
+            <a href="about.html">About</a>
+        </li>
 
+        <!-- Contact -->
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
 
-                    <!-- SHOP -->
-                    <li class="dropdown">
-                        <a href="products.html">Products</a>
-                    </li>
-
-                    <!-- BLOG -->
-                    <li class="dropdown">
-                        <a href="blog-grid.html">Blogs</a>
-                    </li>
-
-                    <li><a href="contact.html">Contact</a></li>
-
-                </ul>
-            </nav>
-
-            <!-- RIGHT ICONS -->
-            <div class="main-header__right">
-
-                <div class="main-header__info">
-                    <!-- SEARCH -->
-                    <a href="javascript:void(0)" class="main-header__info__item search-toggler">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
-
-                    <!-- CART -->
-                    <a href="cart.html" class="main-header__info__item">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="main-header__info__number">02</span>
-                    </a>
-                </div>
-
-                <!-- BUTTON -->
-                <div class="main-header__btn">
-                    <a href="contact.html" class="garlon-btn">
-                        <span>Get Started</span>
-                        <i class="fa-solid fa-angle-right"></i>
-                    </a>
-                </div>
-
-                <!-- MOBILE TOGGLER -->
-                <div class="mobile-nav__btn mobile-nav__toggler">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</header>
-
+    </ul>
+                    </nav><!-- /.main-header__nav -->
+                    <div class="main-header__right">
+                        
+                        <div class="main-header__btn">
+                            <a href="contact.html" class="garlon-btn">
+                                <span>Get Started</span>
+                                <i class="icon-angle-small-right"></i>
+                            </a>
+                        </div><!-- /.main-header__btn -->
+                        <div class="mobile-nav__btn mobile-nav__toggler">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- /.mobile-nav__toggler -->
+                    </div><!-- /.main-header__right -->
+                </div><!-- /.main-header__inner -->
+            </div><!-- /.container-fluid -->
+        </header><!-- /.main-header -->
         <!-- /.main-header -->
         <section class="page-header">
             <div class="page-header__bg" style="background-image: url(assets/images/backgrounds/page-header-bg-2.jpg);"></div>
@@ -949,7 +937,7 @@
             </div><!-- /.container -->
         </section><!-- /.team-one -->
 
-<section class="testimonials-one section-space-top">
+<section class="testimonials-one section-space">
     <div class="testimonials-one__bg"
          style="background-image: url(assets/images/shapes/maps-shape-bg.png);">
     </div>
@@ -1145,7 +1133,7 @@
 
 
 
-        <section class="footer-cta wow fadeInUp mt-5" data-wow-duration="1500ms">
+        <section class="footer-cta wow fadeInUp" data-wow-duration="1500ms">
             <div class="container">
                 <div class="footer-cta__inner">
                     <div class="footer-cta__left">
@@ -1168,9 +1156,13 @@
                 </div><!-- /.footer-cta__inner -->
             </div><!-- /.container -->
         </section><!-- /.footer-cta -->
+
+        
         <footer class="main-footer">
-            <div class="main-footer__bg" style="background-image: url(assets/images/backgrounds/footer-1-1.jpg);"></div><!-- /.main-footer__bg -->
-            <div class="main-footer__shape-one">
+            <div class="main-footer__bg" style="background-image: url(assets/images/backgrounds/footer-1-1.jpg);">
+                
+            </div><!-- /.main-footer__bg -->
+            <div class="main-footer__shape-one ">
                 <img src="assets/images/shapes/shape-footer2.png" alt>
             </div>
             <div class="main-footer__shape-two" style="background-image: url(assets/images/shapes/shape-footer.png);"></div>
@@ -1180,9 +1172,11 @@
                         <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="00ms">
                             <div class="footer-widget footer-widget--about">
                                 <a href="index.html" class="footer-widget__logo">
-                                    <img src="assets/images/logo.png" width="222" alt="Garlon HTML Template">
+                                    <img src="assets/images/logo-light.jpg" width="222" alt="Garlon HTML Template">
                                 </a>
-                                <p class="footer-widget__text">Will give you a complete account the system, and expound the teachings of the great explorer the truth, the master-builder because ...</p>
+<p class="footer-widget__text text-justify">
+Dr. Herbi is rooted in natural wellness, offering thoughtfully crafted herbal and plant-based products inspired by traditional wisdom and backed by modern science.
+</p>
                                 <div class="footer-widget__social-links">
                                     <a href="https://facebook.com"><i class="fab fa-facebook-f" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
                                     <a href="https://twitter.com"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
@@ -1216,37 +1210,52 @@
                             <div class="footer-widget footer-widget--links-two">
                                 <h2 class="footer-widget__title">Quick Link</h2><!-- /.footer-widget__title -->
                                 <ul class="list-unstyled footer-widget__links-two">
-                                    <li><a href="faq.html">What We Do</a></li>
-                                    <li><a href="about.html">About Company</a></li>
-                                    <li><a href="team.html">Team Member</a></li>
-                                    <li><a href="gallery.html">Our Gallery</a></li>
-                                    <li><a href="about.html">Watch Video</a></li>
-                                    <li><a href="blog-grid-left.html">Latest news</a></li>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="products.html">Products</a></li>
+                                    <li><a href="partnerwithus.html">Partnerwithus</a></li>
+                                    <li><a href="gallery-grid.html">Our Gallery</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
                                 </ul><!-- /.list-unstyled footer-widget__links -->
                             </div><!-- /.footer-widget -->
                         </div><!-- /.col-md-6 -->
                         <div class="col-md-6 col-lg-4 col-xl-4 wow fadeInUp" data-wow-delay="200ms">
                             <div class="footer-widget footer-widget--post">
-                                <h2 class="footer-widget__title">Recent Posts</h2><!-- /.footer-widget__title -->
+                                <h2 class="footer-widget__title">Contact us</h2><!-- /.footer-widget__title -->
+
                                 <ul class="list-unstyled">
+ 
                                     <li class="footer-widget--post__item">
                                         <div class="footer-widget--post__img">
-                                            <img src="assets/images/resources/footer-post-1.jpg" alt="post">
-                                            <span>01</span>
+                                           <i class="fa-solid fa-location-dot"></i>
                                         </div>
                                         <div class="footer-widget--post__content">
-                                            <span class="footer-widget--post__date">23 jun 2024</span>
-                                            <h3 class="footer-widget--post__title"><a href="blog-details-right.html">We around easily Blog News</a></h3>
+                                            <h3 class="footer-widget--post__title">  
+     <span>
+                    Sri Aadhiya Botanicals,<br>
+                    Nanguneri to Thisayanvillai Main Road,<br>
+                    Tirunelveli, Tamil Nadu, India
+                </span></h3>
                                         </div>
                                     </li>
                                     <li class="footer-widget--post__item">
                                         <div class="footer-widget--post__img">
-                                            <img src="assets/images/resources/footer-post-2.jpg" alt="post">
-                                            <span>02</span>
+                                                          <i class="icon-phone-call"></i>
+
                                         </div>
                                         <div class="footer-widget--post__content">
-                                            <span class="footer-widget--post__date">23 jun 2024</span>
-                                            <h3 class="footer-widget--post__title"><a href="blog-details-right.html">We around easily Blog News</a></h3>
+                                            <h3 class="footer-widget--post__title">                <a href="tel:+919XXXXXXXXX">+91 9XXXXXXXXX</a>
+</h3>
+                                        </div>
+                                    </li>
+                                    <li class="footer-widget--post__item">
+                                        <div class="footer-widget--post__img">
+                                                          <i class="icon-email"></i>
+
+                                        </div>
+                                        <div class="footer-widget--post__content">
+                                            <h3 class="footer-widget--post__title">                <a href="mailto:info@sriaadhiya.com">info@sriaadhiya.com</a>
+</h3>
                                         </div>
                                     </li>
                                 </ul><!-- /.list-unstyled -->
@@ -1258,7 +1267,7 @@
             <div class="main-footer__bottom  wow fadeInUp" data-wow-delay="00ms">
                 <div class="container">
                     <div class="main-footer__bottom__inner">
-                        <p class="main-footer__copyright"> &copy; Copyright <span class="dynamic-year"></span> by Garlon HTML Template.</p>
+                        <p class="main-footer__copyright"> &copy; Copyright <span class="dynamic-year"></span> by TechMayon</p>
                     </div><!-- /.main-footer__inner -->
                 </div><!-- /.container -->
             </div><!-- /.main-footer__bottom -->
@@ -1308,7 +1317,6 @@
         <span class="scroll-to-top__text">back top</span>
         <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
     </a>
-
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -1378,6 +1386,16 @@
 
 <!-- Template JS -->
 <script src="assets/js/garlon.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".franchise-content").style.opacity = "0";
+    setTimeout(() => {
+      document.querySelector(".franchise-content").style.transition = "1s";
+      document.querySelector(".franchise-content").style.opacity = "1";
+    }, 300);
+  });
+</script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".count-text");
@@ -1401,6 +1419,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 </script>
+
 
 
 </body>

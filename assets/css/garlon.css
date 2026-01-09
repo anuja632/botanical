@@ -51,7 +51,7 @@
 .hero-static {
     position: relative;
     padding: 100px 0;
-    background-image: url('https://img.freepik.com/premium-photo/holistic-health-essentials-rhythmic-pattern-flow_230068-13328.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80');
+    background-image: url('https://img.freepik.com/premium-photo/ayurveda-india-symbol-background_1022134-9017.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -315,6 +315,7 @@
   outline: none !important;
   background-color: var(--garlon-base, #209D2F);
   color: var(--garlon-white, #fff);
+  border: white;
   font-size: 16px;
   font-weight: 600;
   text-transform: capitalize;
@@ -2780,6 +2781,7 @@ p {
 }
 .main-footer__shape-one img {
   animation: movebounce2 3s ease-in-out infinite;
+  height: 150px;
 }
 .main-footer__shape-two {
   background-repeat: repeat;
@@ -2799,6 +2801,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: start;
+  /* background-color: white; */
   margin-bottom: 20px;
 }
 .footer-widget__logo img {
@@ -2927,22 +2930,17 @@ p {
 .footer-widget--post__item {
   display: flex;
   align-items: center;
-  justify-content: start;
-  gap: 24px;
+align-content: center;
 }
 .footer-widget--post__img {
-  width: 85px;
-  height: 85px;
-  border-radius: 100px;
-  position: relative;
-  z-index: 1;
+    width: 30px;
+    /* height: 50px; */
+    border-radius: 100px;
+    position: relative;
+    z-index: 1;
+    color: white;
 }
-.footer-widget--post__img img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 100px;
-}
+
 .footer-widget--post__img span {
   position: absolute;
   top: 0;
@@ -2961,7 +2959,7 @@ p {
   font-weight: 500;
   line-height: normal;
 }
-.footer-widget--post__date {
+.footer-widget--post__date  i{
   color: var(--garlon-white, #fff);
   font-size: 14px;
   font-style: normal;
@@ -2973,11 +2971,11 @@ p {
 .footer-widget--post__title {
   color: var(--garlon-white, #fff);
   font-family: var(--garlon-heading-font, "Lateef", serif);
-  font-size: 25px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 88%;
-  max-width: 150px;
+  /* max-width: 150px; */
   width: 100%;
 }
 .footer-widget--post__title a {
@@ -4501,7 +4499,7 @@ p {
 .main-header--one.sticky-header--cloned .main-header__inner {
   border-bottom: 0px solid transparent;
   margin-bottom: 0px;
-  background-color: transparent;
+  /* background-color: transparent; */
 }
 .main-header--one.sticky-header--cloned .main-menu .main-menu__list > li {
   padding-top: 30px;
@@ -6979,7 +6977,7 @@ body.megamenu-popup-active .mobile-nav__content {
   background-repeat: repeat;
   background-size: cover;
   background-position: center center;
-  background-image: url(../images/shapes/history-2-1.png);
+background-image: url('../images/shapes/history-2-1.png');
   z-index: 1;
 }
 .cta-footer-two__inner {
@@ -13409,10 +13407,13 @@ body.megamenu-popup-active .mobile-nav__content {
 /*--------------------------------------------------------------
 # Client Carousel
 --------------------------------------------------------------*/
-/* .client-carousel {
-  padding:40px 0 40px;
+.client-carousel {
+  /* padding:40px 0 40px; */
   border-bottom: 1px solid var(--garlon-border-color, #DDDDDD);
-} */
+    border-top: 1px solid var(--garlon-border-color, #DDDDDD);
+    background-color: seashell;
+
+}
 .client-carousel.border-none {
   border-bottom: 1px solid transparent;
 }
@@ -18582,4 +18583,101 @@ svg {
   .features { flex-wrap: wrap; justify-content: center; gap: 20px; }
   .badge { width: 300px; height: 300px; }
   .leaf { width: 150px; }
+}
+
+
+
+
+.franchise-section {
+  width: 100%;
+  /* padding: 10px; */
+  /* background: #7b1f1f; */
+
+}
+
+.franchise-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* min-height: 100vh; */
+
+}
+
+/* LEFT SIDE */
+.franchise-content {
+  padding: 80px 70px;
+  color: #fff;
+  /* background:
+    linear-gradient(rgba(123, 31, 31, 0.95), rgba(123, 31, 31, 0.95)),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.05) 1px,
+      transparent 1px,
+      transparent 12px
+    ); */
+      background:
+    linear-gradient(
+      rgba(68, 107, 54, 0.85),
+      rgba(68, 107, 54, 0.85)
+    ),
+    url("https://salemrrbiryani.com/wp-content/uploads/2023/02/page-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color:white;
+}
+
+.franchise-content h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.franchise-content h2 span {
+  display: block;
+}
+
+.franchise-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  color: #f5f5f5;
+}
+
+.franchise-section .garlon-btn{
+  border: 1px solid #fff;
+}
+
+
+/* RIGHT IMAGE */
+.franchise-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.franchise-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .franchise-container {
+    grid-template-columns: 1fr;
+  }
+
+  .franchise-content {
+    padding: 50px 30px;
+  }
+
+  .franchise-content h2 {
+    font-size: 32px;
+  }
+
+  .franchise-image {
+    height: 350px;
+  }
 }
