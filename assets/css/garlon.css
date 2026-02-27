@@ -10302,8 +10302,8 @@ background-image: url('../images/shapes/history-2-1.png');
   color: var(--garlon-white, #fff);
 }
 .product-details__description {
-  margin-top: 50px;
-  padding-top: 45px;
+  /* margin-top: 50px; */
+  padding-top: 5px;
   border-top: 1px solid var(--garlon-border-color, #DDDDDD);
 }
 .product-details__description__title {

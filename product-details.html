@@ -51,10 +51,129 @@
     <!-- Owl Carousel -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
     <!-- Template CSS (KEEP LOCAL) -->
     <link rel="stylesheet" href="assets/vendors/garlon-icons/style.css">
     <link rel="stylesheet" href="assets/css/garlon.css">
+<style>
+/* ================= PRODUCT PAGE ================= */
+
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background:#f7f7f7;
+  overflow-x: hidden;
+}
+
+/* Gallery */
+.product-gallery{
+  display:flex;
+  gap:20px;
+  width:100%;
+}
+
+/* Thumbnails */
+.thumb-slider{
+  width:120px;
+  min-width:120px;
+}
+
+.thumb-slider .slick-list{
+  height:420px !important;
+}
+
+.thumb-slider img{
+  width:100%;
+  height:95px;
+  object-fit:cover;
+  cursor:pointer;
+  border-radius:8px;
+  border:2px solid transparent;
+}
+
+.thumb-slider .slick-current img{
+  border:2px solid #28a745;
+}
+
+/* Main image */
+.main-slider{
+  flex:1;
+}
+
+.main-slider .slick-list{
+  height:500px !important;
+}
+
+.main-slider img{
+  width:400px;
+  height:400px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+/* Quantity box */
+.quantity-box{
+  display:flex;
+  align-items:center;
+  border:1px solid #ddd;
+  width:130px;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.quantity-box button{
+  border:none;
+  background:#f1f1f1;
+  width:40px;
+  height:40px;
+}
+
+.quantity-box input{
+  border:none;
+  width:50px;
+  text-align:center;
+}
+
+/* Product section */
+.product-card{
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+}
+
+/* Description */
+.product-description{
+  background:#fff;
+  padding:30px;
+  margin-top:30px;
+  border-radius:12px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .product-gallery{
+    flex-direction:column;
+  }
+
+  .thumb-slider{
+    width:100%;
+    order:2;
+  }
+
+  .thumb-slider .slick-list{
+    height:auto !important;
+  }
+
+  .main-slider .slick-list{
+    height:auto !important;
+  }
+
+  .main-slider img{
+    height:350px;
+  }
+}
+</style>
 </head>
 <body class="custom-cursor">
 
@@ -146,29 +265,122 @@
             </div>
             <!-- /.page-header__shape -->
             <div class="container">
-                <h2 class="page-header__title bw-split-in-right">Products</h2>
+                <h2 class="page-header__title bw-split-in-right">Products-Details</h2>
                 <ul class="garlon-breadcrumb list-unstyled">
                     <li><a href="index.html">Home</a></li>
-                    <li><span>Products</span></li>
+                    <li><span>Products-Details</span></li>
                 </ul><!-- /.thm-breadcrumb list-unstyled -->
             </div><!-- /.container -->
         </section><!-- /.page-header -->
 
+<section class="product-details section-space">
+<div class="container">
 
+<div class="row gutter-y-30">
 
-<section class="product-one section-space">
-  <div class="container">
-    <div class="row gutter-y-30" id="product-list"></div>
+<!-- ================= LEFT SIDE : GALLERY ================= -->
+<div class="col-lg-6">
+  <div class="product-gallery">
+
+    <!-- Thumbnails -->
+    <div class="thumb-slider">
+      <!-- JS AUTO LOAD -->
+    </div>
+
+    <!-- Main Image -->
+    <div class="main-slider">
+      <!-- JS AUTO LOAD -->
+    </div>
+
   </div>
+</div>
+
+<!-- ================= RIGHT SIDE : CONTENT ================= -->
+<div class="col-lg-6">
+  <div class="product-details__content">
+
+    <h3 class="product-details__title"></h3>
+
+    <div class="product-details__price-inner">
+      <div class="product-details__price">
+        <span class="product-details__price__regular"></span>
+      </div>
+
+      <div class="product-details__review">
+        <span class="icon-star"></span>
+        <span class="icon-star"></span>
+        <span class="icon-star"></span>
+        <span class="icon-star"></span>
+        <span class="icon-star"></span>
+        <span>( 0 ) Herbal Care Rating</span>
+      </div>
+    </div>
+
+    <div class="product-details__excerpt"></div>
+
+    <div class="quantity-box">
+      <button type="button" class="sub"><i class="fa fa-minus"></i></button>
+      <input type="text" value="1">
+      <button type="button" class="add"><i class="fa fa-plus"></i></button>
+    </div>
+
+<div class="product-details__buttons">
+  <a href="#" id="whatsappOrderBtn" class="garlon-btn garlon-btn--base" target="_blank">
+    <span>Order on WhatsApp</span>
+  </a>
+</div>
+
+    <div class="product-details__socials" style="margin-top:20px">
+      <h4>Share:</h4>
+      <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+      <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+<!-- ================= DESCRIPTION SECTION ================= -->
+<div class="product-details__description">
+
+<h3 class="product-details__description__title">Description</h3>
+
+<p class="product-details__description__text"></p>
+<p class="product-details__description__text"></p>
+
+<!-- 🌿 Herbs -->
+<div class="product-details__color-inner mt-5">
+<h4 class="product-details__color__title">🌿 மூலிகைகள் (Herbs):</h4>
+<ul class="list-unstyled product-details__description__lists">
+  <!-- JS AUTO LOAD -->
+</ul>
+</div>
+
+<!-- ✨ Benefits -->
+<div class="product-details__color-inner">
+<h4 class="product-details__color__title">✨ பயன்கள் (Benefits):</h4>
+<ul class="list-unstyled product-details__description__lists">
+  <!-- JS AUTO LOAD -->
+</ul>
+</div>
+
+</div>
+<!-- ================= END DESCRIPTION ================= -->
+
+</div>
 </section>
-
 <script src="assets/js/products.js"></script>
 <script src="assets/js/custom.js"></script>
 
-<script src="assets/js/products.js"></script>
-<script src="assets/js/custom.js"></script>
+        
 
-   
+
+
+
+        
 
         <section class="footer-cta wow fadeInUp" data-wow-duration="1500ms">
             <div class="container">
@@ -420,6 +632,7 @@ Dr. Herbi is rooted in natural wellness, offering thoughtfully crafted herbal an
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollSmoother.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <!-- Template JS -->
 <script src="assets/js/garlon.js"></script>
@@ -432,8 +645,60 @@ Dr. Herbi is rooted in natural wellness, offering thoughtfully crafted herbal an
       document.querySelector(".franchise-content").style.opacity = "1";
     }, 300);
   });
+  
 </script>
+<script>
+$(window).on('load', function () {
 
+  // MAIN SLIDER
+  $('.main-slider').slick({
+    slidesToShow:1,
+    slidesToScroll:1,
+    arrows:true,
+    prevArrow:'<button class="slick-prev main-prev"><i class="fas fa-chevron-left"></i></button>',
+    nextArrow:'<button class="slick-next main-next"><i class="fas fa-chevron-right"></i></button>',
+    fade:true,
+    infinite:false
+  });
+
+  // THUMB SLIDER
+  $('.thumb-slider').slick({
+    slidesToShow:4,
+    slidesToScroll:1,
+    vertical:true,
+    verticalSwiping:true,
+    arrows:true,
+    prevArrow:'<button class="slick-prev thumb-prev"><i class="fas fa-chevron-up"></i></button>',
+    nextArrow:'<button class="slick-next thumb-next"><i class="fas fa-chevron-down"></i></button>',
+    dots:false,
+    infinite:false,
+    focusOnSelect:true,
+    responsive:[
+      {
+        breakpoint:768,
+        settings:{
+          vertical:false,
+          verticalSwiping:false,
+          slidesToShow:4,
+          prevArrow:'<button class="slick-prev thumb-prev"><i class="fas fa-chevron-left"></i></button>',
+          nextArrow:'<button class="slick-next thumb-next"><i class="fas fa-chevron-right"></i></button>',
+        }
+      }
+    ]
+  });
+
+  // 👉 MANUAL SYNC (FIXES BACKWARD BUG)
+  $('.main-slider').on('afterChange', function(event, slick, currentSlide){
+    $('.thumb-slider').slick('slickGoTo', currentSlide);
+  });
+
+  $('.thumb-slider').on('click', '.slick-slide', function(){
+    let index = $(this).data('slick-index');
+    $('.main-slider').slick('slickGoTo', index);
+  });
+
+});
+</script>
 
 
 </body>

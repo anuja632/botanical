@@ -51,10 +51,129 @@
     <!-- Owl Carousel -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
     <!-- Template CSS (KEEP LOCAL) -->
     <link rel="stylesheet" href="assets/vendors/garlon-icons/style.css">
     <link rel="stylesheet" href="assets/css/garlon.css">
+<style>
+/* ================= PRODUCT PAGE ================= */
+
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background:#f7f7f7;
+  overflow-x: hidden;
+}
+
+/* Gallery */
+.product-gallery{
+  display:flex;
+  gap:20px;
+  width:100%;
+}
+
+/* Thumbnails */
+.thumb-slider{
+  width:120px;
+  min-width:120px;
+}
+
+.thumb-slider .slick-list{
+  height:420px !important;
+}
+
+.thumb-slider img{
+  width:100%;
+  height:95px;
+  object-fit:cover;
+  cursor:pointer;
+  border-radius:8px;
+  border:2px solid transparent;
+}
+
+.thumb-slider .slick-current img{
+  border:2px solid #28a745;
+}
+
+/* Main image */
+.main-slider{
+  flex:1;
+}
+
+.main-slider .slick-list{
+  height:500px !important;
+}
+
+.main-slider img{
+  width:400px;
+  height:400px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+/* Quantity box */
+.quantity-box{
+  display:flex;
+  align-items:center;
+  border:1px solid #ddd;
+  width:130px;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.quantity-box button{
+  border:none;
+  background:#f1f1f1;
+  width:40px;
+  height:40px;
+}
+
+.quantity-box input{
+  border:none;
+  width:50px;
+  text-align:center;
+}
+
+/* Product section */
+.product-card{
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+}
+
+/* Description */
+.product-description{
+  background:#fff;
+  padding:30px;
+  margin-top:30px;
+  border-radius:12px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .product-gallery{
+    flex-direction:column;
+  }
+
+  .thumb-slider{
+    width:100%;
+    order:2;
+  }
+
+  .thumb-slider .slick-list{
+    height:auto !important;
+  }
+
+  .main-slider .slick-list{
+    height:auto !important;
+  }
+
+  .main-slider img{
+    height:350px;
+  }
+}
+</style>
 </head>
 <body class="custom-cursor">
 
@@ -135,8 +254,8 @@
         </header><!-- /.main-header -->
 
         <!-- /.main-header -->
-        <section class="page-header">
-            <div class="page-header__bg" style="background-image: url(assets/images/backgrounds/page-header-bg-2.jpg);"></div>
+<section class="page-header">
+            <div class="page-header__bg" style="background-image: url(assets/images/backgrounds/page-header-bg-1-1.jpg);"></div>
             <!-- /.page-header__bg -->
             <div class="page-header__shape-one">
                 <img src="assets/images/shapes/page-header-shape-1-1.png" alt="shape">
@@ -146,29 +265,210 @@
             </div>
             <!-- /.page-header__shape -->
             <div class="container">
-                <h2 class="page-header__title bw-split-in-right">Products</h2>
+                <h2 class="page-header__title bw-split-in-right" style="perspective: 400px;"><div style="position:relative;display:inline-block;"><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">C</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">h</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">e</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">c</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">k</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">o</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">u</div><div style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">t</div></div></h2>
                 <ul class="garlon-breadcrumb list-unstyled">
                     <li><a href="index.html">Home</a></li>
                     <li><span>Products</span></li>
                 </ul><!-- /.thm-breadcrumb list-unstyled -->
             </div><!-- /.container -->
-        </section><!-- /.page-header -->
+        </section>
+
+
+<section class="checkout-page section-space">
+            <div class="container">
+                <div class="checkout-page__notice">Have a Coupon? <a href="login.html"> Click Here to Enter Your Code</a></div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="checkout-page__billing-address">
+                            <h2 class="checkout-page__billing-address__title">Billing Address :</h2>
+                            <form class="checkout-page__form">
+                                <div class="row bs-gutter-x-20">
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <input type="text" name="first-name" placeholder="Frist Name" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <input type="text" name="last-name" placeholder="Last Name" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="checkout-page__input-box">
+                                            <input type="text" name="company-name" placeholder="Company Name" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="checkout-page__input-box">
+                                            <input type="text" name="address" placeholder="Address" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <input name="country" type="text" placeholder="Country">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <input type="text" name="state" placeholder="City" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <input name="form_zip" type="text" pattern="[0-9]*" placeholder="Zip Code">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <input type="tel" name="form-phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="" placeholder="Phone Number">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="checkout-page__input-box">
+                                            <input type="email" name="email" placeholder="Email Address" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="checkout-page__billing-address">
+                            <h2 class="checkout-page__billing-address__title">Delivery Address :</h2>
+                            <form class="checkout-page__form">
+                                <div class="row bs-gutter-x-20">
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <input type="text" name="first-name" placeholder="Frist Name" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <input type="text" name="last-name" placeholder="Last Name" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="checkout-page__input-box">
+                                            <input type="text" name="company-name" placeholder="Company Name" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="checkout-page__input-box">
+                                            <input type="text" name="address" placeholder="Address" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <input name="country" type="text" placeholder="Country">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <input type="text" name="state" placeholder="City" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <input name="form_zip" type="text" pattern="[0-9]*" placeholder="Zip Code">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="checkout-page__input-box">
+                                            <input type="tel" name="form-phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="" placeholder="Phone Number">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12">
+                                        <div class="checkout-page__input-box">
+                                            <input type="email" name="email" placeholder="Email Address" required="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout-page__details">
+                    <h2 class="checkout-page__details__title">Shipping Details</h2>
+                    <div class="checkout-page__details__check-box">
+                        <input type="checkbox" name="skipper4" id="skipper4" checked="">
+                        <label for="skipper4">Same as Billing Details<span></span></label>
+                    </div>
+                </div><!-- /.checkout-page__details -->
+                <div class="checkout-page__your-order">
+                    <h2 class="checkout-page__your-order__title">Your Order</h2>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6">
+                            <table class="checkout-page__order-table">
+                                <thead class="order_table_head">
+                                    <tr>
+                                        <th>Product</th>
+                                        <th class="right">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="pro__title">Product Name</td>
+                                        <td class="pro__price">$10.33</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pro__title">Subtotal</td>
+                                        <td class="pro__price">$10.33</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pro__title">Shipping</td>
+                                        <td class="pro__price">$0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pro__title">Total</td>
+                                        <td class="pro__price">$20.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="checkout-page__payment">
+                                <div class="checkout-page__payment__item">
+                                    <h3 class="checkout-page__payment__title">Direct Bank Transfer</h3>
+                                    <div class="checkout-page__payment__content" style="display: none;">
+                                        Make your payment directly into our bank account. Please
+                                        use your Order ID as the payment reference. Your order
+                                        wont be shipped until the funds have cleared.
+                                    </div><!-- /.checkout__payment__content -->
+                                </div><!-- /.checkout__payment__item -->
+                                <div class="checkout-page__payment__item">
+                                    <h3 class="checkout-page__payment__title">Cash on Delivery</h3>
+                                    <div class="checkout-page__payment__content" style="display: none;">
+                                        Make your payment directly into our bank account. Please
+                                        use your Order ID as the payment reference. Your order
+                                        wont be shipped until the funds have cleared.
+                                    </div><!-- /.checkout__payment__content -->
+                                </div><!-- /.checkout__payment__item -->
+                                <div class="checkout-page__payment__item checkout-page__payment__item--active">
+                                    <h3 class="checkout-page__payment__title">Cash on Delivery</h3>
+                                    <div class="checkout-page__payment__content" style="">
+                                        Make your payment directly into our bank account. Please
+                                        use your Order ID as the payment reference. Your order
+                                        wont be shipped until the funds have cleared.
+                                    </div><!-- /.checkout__payment__content -->
+                                </div><!-- /.checkout__payment__item -->
+                            </div><!-- /.checkout__payment -->
+                            <div class="checkout-page__payment__btn text-right d-flex justify-content-start">
+                                <a href="checkout.html" class="garlon-btn garlon-btn--dark"> <span>PLACE YOUR ORDER</span> <i class="icon-angle-small-right"></i></a>
+                            </div><!-- /.text-right -->
+
+                        </div><!-- /.col-lg-6 -->
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
-<section class="product-one section-space">
-  <div class="container">
-    <div class="row gutter-y-30" id="product-list"></div>
-  </div>
-</section>
 
-<script src="assets/js/products.js"></script>
-<script src="assets/js/custom.js"></script>
 
-<script src="assets/js/products.js"></script>
-<script src="assets/js/custom.js"></script>
 
-   
+
+        
 
         <section class="footer-cta wow fadeInUp" data-wow-duration="1500ms">
             <div class="container">
@@ -420,6 +720,7 @@ Dr. Herbi is rooted in natural wellness, offering thoughtfully crafted herbal an
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollSmoother.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <!-- Template JS -->
 <script src="assets/js/garlon.js"></script>
@@ -433,7 +734,58 @@ Dr. Herbi is rooted in natural wellness, offering thoughtfully crafted herbal an
     }, 300);
   });
 </script>
+<script>
+$(window).on('load', function () {
 
+  // MAIN SLIDER
+  $('.main-slider').slick({
+    slidesToShow:1,
+    slidesToScroll:1,
+    arrows:true,
+    prevArrow:'<button class="slick-prev main-prev"><i class="fas fa-chevron-left"></i></button>',
+    nextArrow:'<button class="slick-next main-next"><i class="fas fa-chevron-right"></i></button>',
+    fade:true,
+    infinite:false
+  });
+
+  // THUMB SLIDER
+  $('.thumb-slider').slick({
+    slidesToShow:4,
+    slidesToScroll:1,
+    vertical:true,
+    verticalSwiping:true,
+    arrows:true,
+    prevArrow:'<button class="slick-prev thumb-prev"><i class="fas fa-chevron-up"></i></button>',
+    nextArrow:'<button class="slick-next thumb-next"><i class="fas fa-chevron-down"></i></button>',
+    dots:false,
+    infinite:false,
+    focusOnSelect:true,
+    responsive:[
+      {
+        breakpoint:768,
+        settings:{
+          vertical:false,
+          verticalSwiping:false,
+          slidesToShow:4,
+          prevArrow:'<button class="slick-prev thumb-prev"><i class="fas fa-chevron-left"></i></button>',
+          nextArrow:'<button class="slick-next thumb-next"><i class="fas fa-chevron-right"></i></button>',
+        }
+      }
+    ]
+  });
+
+  // 👉 MANUAL SYNC (FIXES BACKWARD BUG)
+  $('.main-slider').on('afterChange', function(event, slick, currentSlide){
+    $('.thumb-slider').slick('slickGoTo', currentSlide);
+  });
+
+  $('.thumb-slider').on('click', '.slick-slide', function(){
+    let index = $(this).data('slick-index');
+    $('.main-slider').slick('slickGoTo', index);
+  });
+
+});
+</script>
 
 
 </body>

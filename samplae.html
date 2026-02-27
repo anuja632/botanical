@@ -2,221 +2,608 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>100% Natural Ingredients</title>
+<title>Product Details</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<!-- Slick CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" rel="stylesheet">
 
 <style>
-  body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ffffff;
-    font-family: Arial, sans-serif;
+/* ================= PRODUCT PAGE ================= */
+
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background:#f7f7f7;
+  overflow-x: hidden;
+}
+
+/* Gallery */
+.product-gallery{
+  display:flex;
+  gap:20px;
+  width:100%;
+}
+
+/* Thumbnails */
+.thumb-slider{
+  width:120px;
+  min-width:120px;
+}
+
+.thumb-slider .slick-list{
+  height:420px !important;
+}
+
+.thumb-slider img{
+  width:100%;
+  height:95px;
+  object-fit:cover;
+  cursor:pointer;
+  border-radius:8px;
+  border:2px solid transparent;
+}
+
+.thumb-slider .slick-current img{
+  border:2px solid #28a745;
+}
+
+/* Main image */
+.main-slider{
+  flex:1;
+}
+
+.main-slider .slick-list{
+  height:500px !important;
+}
+
+.main-slider img{
+  width:500px;
+  height:500px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+/* Quantity box */
+.quantity-box{
+  display:flex;
+  align-items:center;
+  border:1px solid #ddd;
+  width:130px;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.quantity-box button{
+  border:none;
+  background:#f1f1f1;
+  width:40px;
+  height:40px;
+}
+
+.quantity-box input{
+  border:none;
+  width:50px;
+  text-align:center;
+}
+
+/* Product section */
+.product-card{
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+}
+
+/* Description */
+.product-description{
+  background:#fff;
+  padding:30px;
+  margin-top:30px;
+  border-radius:12px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .product-gallery{
+    flex-direction:column;
   }
 
-  .badge {
-    width: 300px;
-    height: 300px;
+  .thumb-slider{
+    width:100%;
+    order:2;
   }
 
-  .leaf {
-    position: absolute;
-    width: 180px;
-    left: 50%;
-    top: 50%;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
+  .thumb-slider .slick-list{
+    height:auto !important;
   }
 
-  svg {
-    width: 100%;
-    height: 100%;
+  .main-slider .slick-list{
+    height:auto !important;
   }
 
-  text {
-    font-size: 14px;
-    letter-spacing: 3px;
-    fill: #222;
+  .main-slider img{
+    height:350px;
   }
+}
 </style>
 </head>
 
 <body>
 
-<div class="badge">
-  <svg viewBox="0 0 300 300">
+<section class="container py-5">
+  <div class="row g-4">
 
-    <!-- Outer Circle -->
-    <circle cx="150" cy="150" r="130" fill="none" stroke="#222" stroke-width="2"/>
+    <!-- LEFT: GALLERY -->
+    <div class="col-lg-6">
+      <div class="product-gallery">
 
-    <!-- Top Curve -->
-    <path id="topCurve" d="M 40 150 A 110 110 0 0 1 260 150" fill="none"/>
+        <!-- Thumbnails -->
+        <div class="thumb-slider">
+          <div><img src="https://picsum.photos/id/1011/600/600"></div>
+          <div><img src="https://picsum.photos/id/1015/600/600"></div>
+          <div><img src="https://picsum.photos/id/1016/600/600"></div>
+          <div><img src="https://picsum.photos/id/1020/600/600"></div>
+          <div><img src="https://picsum.photos/id/1024/600/600"></div>
+          <div><img src="https://picsum.photos/id/1027/600/600"></div>
+        </div>
 
-    <!-- Bottom Curve -->
-    <path id="bottomCurve" d="M 40 150 A 110 110 0 0 0 260 150" fill="none"/>
+        <!-- Main Image -->
+        <div class="main-slider">
+          <div><img src="https://picsum.photos/id/1011/1000/800"></div>
+          <div><img src="https://picsum.photos/id/1015/1000/800"></div>
+          <div><img src="https://picsum.photos/id/1016/1000/800"></div>
+          <div><img src="https://picsum.photos/id/1020/1000/800"></div>
+          <div><img src="https://picsum.photos/id/1024/1000/800"></div>
+          <div><img src="https://picsum.photos/id/1027/1000/800"></div>
+        </div>
 
-    <!-- Top Text -->
-    <text>
-      <textPath href="#topCurve" startOffset="50%" text-anchor="middle">
-        100% NATURAL
-      </textPath>
-    </text>
+      </div>
+    </div>
 
-    <!-- Bottom Text -->
-    <text>
-      <textPath href="#bottomCurve" startOffset="50%" text-anchor="middle">
-        INGREDIENTS
-      </textPath>
-    </text>
+    <!-- RIGHT: PRODUCT INFO -->
+    <div class="col-lg-6">
+      <div class="product-card">
 
-  </svg>
+        <h3>Landscape Consulting Business Solution</h3>
 
-  <!-- Center Image -->
-  <img class="leaf" src="https://img.freepik.com/premium-psd/medicinal-herbs-mortar-illustration-isolated-transparent-background_979495-150680.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Leaf">
-</div>
-<div class="badge">
-  <svg viewBox="0 0 300 300">
+        <div class="d-flex align-items-center mb-2">
+          <div class="text-warning me-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <small>(4.8 rating)</small>
+        </div>
 
-    <!-- Outer Circle -->
-    <circle cx="150" cy="150" r="130" fill="none" stroke="#222" stroke-width="2"/>
+        <h4 class="text-success">$48.00</h4>
 
-    <!-- Top Curve -->
-    <path id="topCurve" d="M 40 150 A 110 110 0 0 1 260 150" fill="none"/>
+        <p class="text-muted">
+          Professional landscaping consulting, business planning, and premium
+          service solutions for modern infrastructure and smart projects.
+        </p>
 
-    <!-- Bottom Curve -->
-    <path id="bottomCurve" d="M 40 150 A 110 110 0 0 0 260 150" fill="none"/>
+        <!-- Colors -->
+        <div class="mb-3">
+          <strong>Color:</strong><br>
+          <span class="badge bg-success">Green</span>
+          <span class="badge bg-primary">Blue</span>
+          <span class="badge bg-dark">Black</span>
+        </div>
 
-    <!-- Top Text -->
-    <text>
-      <textPath href="#topCurve" startOffset="50%" text-anchor="middle">
-        100% NATURAL
-      </textPath>
-    </text>
+        <!-- Quantity -->
+        <div class="quantity-box mb-3">
+          <button class="minus">-</button>
+          <input type="text" value="1" id="qty">
+          <button class="plus">+</button>
+        </div>
 
-    <!-- Bottom Text -->
-    <text>
-      <textPath href="#bottomCurve" startOffset="50%" text-anchor="middle">
-        INGREDIENTS
-      </textPath>
-    </text>
+        <!-- Buttons -->
+        <div class="d-flex gap-3 mb-4">
+          <button class="btn btn-success">Add to Cart</button>
+          <button class="btn btn-outline-secondary">Buy Now</button>
+        </div>
 
-  </svg>
+        <!-- Social -->
+        <div>
+          <strong>Share:</strong><br>
+          <a href="#"><i class="fab fa-facebook me-2"></i></a>
+          <a href="#"><i class="fab fa-instagram me-2"></i></a>
+          <a href="#"><i class="fab fa-twitter me-2"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
 
-  <!-- Center Image -->
-  <img class="leaf" src="https://img.freepik.com/premium-psd/medicinal-herbs-mortar-illustration-isolated-transparent-background_979495-150680.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Leaf">
-</div>
+      </div>
+    </div>
 
-<div class="badge">
-  <svg viewBox="0 0 300 300">
+  </div>
 
-    <!-- Outer Circle -->
-    <circle cx="150" cy="150" r="130" fill="none" stroke="#222" stroke-width="2"/>
+  <!-- DESCRIPTION -->
+  <div class="product-description">
+    <h4>Description</h4>
+    <p>
+      We provide expert landscaping consulting, business strategy,
+      infrastructure planning, and premium service solutions for modern
+      enterprises and smart cities.
+    </p>
 
-    <!-- Top Curve -->
-    <path id="topCurve" d="M 40 150 A 110 110 0 0 1 260 150" fill="none"/>
+    <ul>
+      <li>Professional consulting services</li>
+      <li>Custom business solutions</li>
+      <li>Smart infrastructure planning</li>
+      <li>Modern landscaping strategies</li>
+    </ul>
 
-    <!-- Bottom Curve -->
-    <path id="bottomCurve" d="M 40 150 A 110 110 0 0 0 260 150" fill="none"/>
+    <p>
+      Our solutions are designed to help businesses scale efficiently,
+      sustainably, and profitably with long-term growth models.
+    </p>
+  </div>
 
-    <!-- Top Text -->
-    <text>
-      <textPath href="#topCurve" startOffset="50%" text-anchor="middle">
-        100% NATURAL
-      </textPath>
-    </text>
+</section>
 
-    <!-- Bottom Text -->
-    <text>
-      <textPath href="#bottomCurve" startOffset="50%" text-anchor="middle">
-        INGREDIENTS
-      </textPath>
-    </text>
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-  </svg>
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Center Image -->
-  <img class="leaf" src="https://img.freepik.com/premium-psd/medicinal-herbs-mortar-illustration-isolated-transparent-background_979495-150680.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Leaf">
-</div>
-
-<div class="badge">
-  <svg viewBox="0 0 300 300">
-
-    <!-- Outer Circle -->
-    <circle cx="150" cy="150" r="130" fill="none" stroke="#222" stroke-width="2"/>
-
-    <!-- Top Curve -->
-    <path id="topCurve" d="M 40 150 A 110 110 0 0 1 260 150" fill="none"/>
-
-    <!-- Bottom Curve -->
-    <path id="bottomCurve" d="M 40 150 A 110 110 0 0 0 260 150" fill="none"/>
-
-    <!-- Top Text -->
-    <text>
-      <textPath href="#topCurve" startOffset="50%" text-anchor="middle">
-        100% NATURAL
-      </textPath>
-    </text>
-
-    <!-- Bottom Text -->
-    <text>
-      <textPath href="#bottomCurve" startOffset="50%" text-anchor="middle">
-        INGREDIENTS
-      </textPath>
-    </text>
-
-  </svg>
-
-  <!-- Center Image -->
-  <img class="leaf" src="https://img.freepik.com/premium-psd/medicinal-herbs-mortar-illustration-isolated-transparent-background_979495-150680.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Leaf">
-</div>
-
-<div class="badge">
-  <svg viewBox="0 0 300 300">
-
-    <!-- Outer Circle -->
-    <circle cx="150" cy="150" r="130" fill="none" stroke="#222" stroke-width="2"/>
-
-    <!-- Top Curve -->
-    <path id="topCurve" d="M 40 150 A 110 110 0 0 1 260 150" fill="none"/>
-
-    <!-- Bottom Curve -->
-    <path id="bottomCurve" d="M 40 150 A 110 110 0 0 0 260 150" fill="none"/>
-
-    <!-- Top Text -->
-    <text>
-      <textPath href="#topCurve" startOffset="50%" text-anchor="middle">
-        100% NATURAL
-      </textPath>
-    </text>
-
-    <!-- Bottom Text -->
-    <text>
-      <textPath href="#bottomCurve" startOffset="50%" text-anchor="middle">
-        INGREDIENTS
-      </textPath>
-    </text>
-
-  </svg>
-
-  <!-- Center Image -->
-  <img class="leaf" src="https://img.freepik.com/premium-psd/medicinal-herbs-mortar-illustration-isolated-transparent-background_979495-150680.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Leaf">
-</div>
-
+<!-- Slick -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 <script>
-  // Optional hover effect
-  const badge = document.querySelector('.badge');
+$(window).on('load', function () {
 
-  badge.addEventListener('mouseenter', () => {
-    badge.style.transform = 'scale(1.05)';
-    badge.style.transition = '0.3s ease';
+  $('.thumb-slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    asNavFor: '.main-slider',
+    focusOnSelect: true,
+    arrows:false,
+    dots:false,
+    infinite:false,
+    responsive:[
+      {
+        breakpoint:768,
+        settings:{
+          vertical:false,
+          verticalSwiping:false,
+          slidesToShow:4
+        }
+      }
+    ]
   });
 
-  badge.addEventListener('mouseleave', () => {
-    badge.style.transform = 'scale(1)';
+  $('.main-slider').slick({
+    slidesToShow:1,
+    slidesToScroll:1,
+    arrows:false,
+    fade:true,
+    asNavFor: '.thumb-slider',
+    infinite:false
   });
+
+  // Quantity
+  $('.plus').click(function(){
+    let v = parseInt($('#qty').val());
+    $('#qty').val(v+1);
+  });
+
+  $('.minus').click(function(){
+    let v = parseInt($('#qty').val());
+    if(v>1) $('#qty').val(v-1);
+  });
+
+});
 </script>
 
 </body>
 </html>
+
+
+
+<section class="product-one section-space">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+
+                        <div class="row gutter-y-30">
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                                           <!-- Product 1 -->
+            <div class="item">
+                <div class="product__item">
+                    <div class="product__item__img">
+                        <a href="product-details.html">
+
+                            <img src="assets/images/product/product1.jpeg" alt="Hemoglobin Boost Herbal Dip" class="productimg">
+                        </a>
+                        <div class="product__item__btn">
+                            <a href="#"><i class="fas fa-share-alt"></i></a>
+                            <a href="cart.html"><i class="far fa-heart"></i></a>
+                            <a href="product-details.html"><i class="fas fa-eye"></i></a>
+                            <a href="#"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="product__item__content">
+                        <h4 class="product__item__title">
+                            <a href="product-details.html">Hemoglobin Boost Dip</a>
+                        </h4>
+                        <div class="product__item__price">₹245 – ₹356</div>
+                        <div class="product__item__ratings">
+                            <i class="icon-star"></i><i class="icon-star"></i>
+                            <i class="icon-star"></i><i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                        </div>
+                        <a href="cart.html" class="garlon-btn garlon-btn--dark">
+                            <span>Add to Cart</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+                            </div><!-- /.col-md-6 col-lg-4 col-xl-3"> -->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                                  <!-- Product 2 -->
+            <div class="item">
+                <div class="product__item">
+                    <div class="product__item__img">
+                        <a href="product-details.html">
+
+                            <img src="assets/images/product/product2.jpeg" alt="Heart Protection Herbal Tea" class="productimg">
+                        </a>
+                        <div class="product__item__btn">
+                            <a href="#"><i class="fas fa-share-alt"></i></a>
+                            <a href="cart.html"><i class="far fa-heart"></i></a>
+                            <a href="product-details.html"><i class="fas fa-eye"></i></a>
+                            <a href="#"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="product__item__content">
+                        <h4 class="product__item__title">
+                            <a href="product-details.html">Heart Care Herbal Dip</a>
+                        </h4>
+                        <div class="product__item__price">₹245 – ₹356</div>
+                        <div class="product__item__ratings">
+                            <i class="icon-star"></i><i class="icon-star"></i>
+                            <i class="icon-star"></i><i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                        </div>
+                        <a href="cart.html" class="garlon-btn garlon-btn--dark">
+                            <span>Add to Cart</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+                            </div><!-- /.col-md-6 col-lg-4 col-xl-3"> -->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                                   
+            <!-- Product 3 -->
+            <div class="item">
+                <div class="product__item">
+
+                    <div class="product__item__img">
+                        <a href="product-details.html">
+
+                            <img src="assets/images/product/product3.jpeg" alt="Kidney Protect Herbal Tea" class="productimg">
+                        </a>
+                        <div class="product__item__btn">
+                            <a href="#"><i class="fas fa-share-alt"></i></a>
+                            <a href="cart.html"><i class="far fa-heart"></i></a>
+                            <a href="product-details.html"><i class="fas fa-eye"></i></a>
+                            <a href="#"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="product__item__content">
+                        <h4 class="product__item__title">
+                            <a href="product-details.html">Kidney Protect Herbal Tea</a>
+                        </h4>
+                        <div class="product__item__price">₹245 – ₹356</div>
+                        <div class="product__item__ratings">
+                            <i class="icon-star"></i><i class="icon-star"></i>
+                            <i class="icon-star"></i><i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                        </div>
+                        <a href="cart.html" class="garlon-btn garlon-btn--dark">
+                            <span>Add to Cart</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+                            </div><!-- /.col-md-6 col-lg-4 col-xl-3"> -->
+                            <div class="col-md-6 col-lg-4 col-xl-3">
+                           
+            <!-- Product 4 -->
+            <div class="item">
+                <div class="product__item">
+                    <div class="product__item__img">
+                        <a href="product-details.html">
+                            <img src="assets/images/product/product4.jpeg" alt="PCOS Herbal Tea" class="productimg">
+                        </a>
+                        <div class="product__item__btn">
+                            <a href="#"><i class="fas fa-share-alt"></i></a>
+                            <a href="cart.html"><i class="far fa-heart"></i></a>
+                            <a href="product-details.html"><i class="fas fa-eye"></i></a>
+                            <a href="#"><i class="fas fa-sync-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="product__item__content">
+                        <h4 class="product__item__title">
+                            <a href="product-details.html">PCOS Balance Dip</a>
+                        </h4>
+                        <div class="product__item__price">₹245 – ₹356</div>
+                        <div class="product__item__ratings">
+                            <i class="icon-star"></i><i class="icon-star"></i>
+                            <i class="icon-star"></i><i class="icon-star"></i>
+                            <i class="icon-star"></i>
+                        </div>
+                        <a href="cart.html" class="garlon-btn garlon-btn--dark">
+                            <span>Add to Cart</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+                            </div>
+                            <!-- <div class="col-md-12">
+                                <ul class="post-pagination justify-content-center" data-wow-duration="1500ms" data-wow-delay="500ms">
+                                    <li class="active"><a href="javascript:void(0)">01</a></li>
+                                    <li><a href="javascript:void(0)">02</a></li>
+                                    <li><a href="javascript:void(0)"><i class="icon-angle-small-right"></i></a></li>
+                                </ul>
+                            </div> -->
+                        </div><!-- /.row -->
+                    </div><!-- /.col-lg-9 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="product-details section-space">
+            <div class="container">
+                <div class="row gutter-y-30">
+                    <div class="col-lg-6 wow fadeInLeft animated" data-wow-delay="100ms" style="visibility: visible; animation-delay: 100ms; animation-name: fadeInLeft;">
+      <div class="product-gallery">
+
+        <!-- Thumbnails -->
+        <div class="thumb-slider">
+          <div><img src="assets/images/product/product1.jpeg"></div>
+          <div><img src="assets/images/product/product2.jpeg"></div>
+          <div><img src="assets/images/product/product3.jpeg"></div>
+          <div><img src="assets/images/product/product4.jpeg"></div>
+
+        </div>
+
+        <!-- Main Image -->
+        <div class="main-slider">
+          <div><img src="assets/images/product/product1.jpeg"></div>
+          <div><img src="assets/images/product/product2.jpeg"></div>
+          <div><img src="assets/images/product/product3.jpeg"></div>
+          <div><img src="assets/images/product/product4.jpeg"></div>
+
+        </div>
+
+      </div>
+                    </div><!-- /.column -->
+                    <div class="col-lg-6 wow fadeInRight animated" data-wow-delay="200ms" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInRight;">
+                        <div class="product-details__content">
+                            
+                            <h3 class="product-details__title">
+                            PCOD / PCOS Care Herbals
+                            </h3>
+
+                            <div class="product-details__price-inner">
+                                <div class="product-details__price">
+                                    <span class="product-details__price__regular">₹1,299</span>
+                                </div>
+
+                                <div class="product-details__review">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span>( 4.9 ) Herbal Care Rating</span>
+                                </div>
+                            </div>
+
+                            <div class="product-details__excerpt">
+                            Natural herbal formulation specially designed for PCOD / PCOS care.  
+                            Supports hormonal balance, menstrual regularity, insulin control, weight management, and fertility improvement using traditional Siddha & Ayurvedic herbs.
+                            </div>
+
+                            <div class="quantity-box">
+                                <button type="button" class="sub"><i class="fa fa-minus"></i></button>
+                                <input type="text" id="1" value="1">
+                                <button type="button" class="add"><i class="fa fa-plus"></i></button>
+                            </div>
+                            <div class="product-details__buttons">
+                                <a href="cart.html" class="garlon-btn garlon-btn--base"><span>ADD TO CART</span></a>
+                            </div><!-- /.qty-btn -->
+
+                            <div class="product-details__socials">
+                                <h4 class="product-details__socials__title">Share:</h4>
+
+                                <a href="https://facebook.com"> <i class="fab fa-facebook-f" aria-hidden="true"></i> <span class="sr-only">Facebook</span></a>
+                                <a href="https://twitter.com"> <i class="fab fa-twitter" aria-hidden="true"></i> <span class="sr-only">Twitter</span> </a>
+                                <a href="https://linkedin.com"> <i class="fab fa-linkedin-in" aria-hidden="true"></i> <span class="sr-only">Linkedin</span> </a>
+                                <a href="https://instagram.com"> <i class="fab fa-instagram" aria-hidden="true"></i> <span class="sr-only">Instagram</span> </a>
+                            </div><!-- /.social-share -->
+                        </div>
+                    </div>
+                </div>
+               
+
+
+
+ <!-- /.product-description -->
+<div class="product-details__description wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
+
+<h3 class="product-details__description__title">Description</h3>
+
+<p class="product-details__description__text">
+PCOD / PCOS Care Herbals is a natural herbal formulation prepared using traditional Siddha and Ayurvedic principles.  
+This product helps regulate hormones, improve menstrual cycle, manage insulin resistance, support healthy weight control, and enhance fertility naturally.
+</p>
+<p class="product-details__description__text">
+Regular usage along with healthy lifestyle, proper diet, and exercise helps in managing PCOD / PCOS symptoms effectively and naturally.
+</p>
+
+<!-- 🌿 Herbs Section -->
+<div class="product-details__color-inner mt-5">
+<h4 class="product-details__color__title" style="color:black">🌿 மூலிகைகள் (Herbs):</h4>
+<ul class="list-unstyled product-details__description__lists">
+    <li><i class="fas fa-arrow-circle-right"></i>  தூதுவளை (Thuthuvalai)</li>
+    <li><i class="fas fa-arrow-circle-right"></i>  நன்னாரி (Nannari / Indian Sarsaparilla)</li>
+    <li><i class="fas fa-arrow-circle-right"></i>  கறிவேப்பிலை (Curry Leaves)</li>
+    <li><i class="fas fa-arrow-circle-right"></i>  வெந்தயம் (Fenugreek)</li>
+    <li><i class="fas fa-arrow-circle-right"></i>  சீமை அகத்தி (Sesbania)</li>
+    <li><i class="fas fa-arrow-circle-right"></i>  துளசி (Tulsi / Holy Basil)</li>
+</ul>
+</div>
+
+<!-- 🌸 Benefits -->
+<div class="product-details__color-inner">
+<h4 class="product-details__color__title" style="color:black">✨ பயன்கள் (Benefits):</h4>
+<ul class="list-unstyled product-details__description__lists">
+    <li><i class="fas fa-arrow-circle-right"></i>  ஹார்மோன் சமநிலை (Hormonal balance)</li>
+    <li><i class="fas fa-arrow-circle-right"></i>  இன்சுலின் கட்டுப்பாடு (Insulin regulation)</li>
+    <li><i class="fas fa-arrow-circle-right"></i>  மாதவிடாய் சீராக்கம் (Menstrual regulation)</li>
+    <li><i class="fas fa-arrow-circle-right"></i>  உடல் எடை குறைப்பு (Weight control)</li>
+    <li><i class="fas fa-arrow-circle-right"></i>  கர்ப்பதார்த்தம் மேம்பாடு (Improves fertility)</li>
+</ul>
+</div>
+
+<!-- <ul class="list-unstyled product-details__description__lists">
+<li><i class="fas fa-arrow-circle-right"></i> 100% Natural Herbal Ingredients</li>
+<li><i class="fas fa-arrow-circle-right"></i> No Chemicals, No Steroids, No Hormones</li>
+<li><i class="fas fa-arrow-circle-right"></i> Supports Hormonal & Metabolic Health</li>
+<li><i class="fas fa-arrow-circle-right"></i> Safe for Long-term Use</li>
+</ul> -->
+
+
+
+</div>
+                <!-- /.product-description -->
+
+            </div>
+        </section>
