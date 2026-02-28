@@ -2641,7 +2641,7 @@ p {
   font-size: 14px;
   font-weight: 400;
   border: 1px solid var(--garlon-border-color, #DDDDDD);
-  border-radius: 5px;
+  border-radius: 5px !important;
   outline: none;
   font-family: var(--garlon-font, "Lato", sans-serif);
   padding-left: 30px;
@@ -2653,7 +2653,7 @@ p {
 .form-one input[type=email]:focus,
 .form-one input[type=tel]:focus,
 .form-one textarea:focus {
-  color: var(--garlon-black, #000000);
+  /* color: var(--garlon-black, #000000); */
   font-weight: 500;
   border-color: var(--garlon-white, #fff);
 }
@@ -6807,7 +6807,8 @@ body.megamenu-popup-active .mobile-nav__content {
 .footer-cta__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap:20px;
+  /* justify-content: space-between; */
   background-color: var(--garlon-base, #209D2F);
   border-radius: 20px 20px 0px 0px;
   padding: 29px 50px;
@@ -6862,10 +6863,11 @@ body.megamenu-popup-active .mobile-nav__content {
 .footer-cta .form-group__form {
   background-color: var(--garlon-white, #fff);
   display: flex;
+  padding: 5px;
   align-items: center;
   position: relative;
   border-radius: 60px;
-  width: 470px;
+  width: 640px;
 }
 @media (max-width: 767px) {
   .footer-cta .form-group__form {
@@ -6906,7 +6908,7 @@ body.megamenu-popup-active .mobile-nav__content {
   line-height: normal;
 }
 .footer-cta .form-group__form button[type=submit] {
-  position: absolute;
+  /* position: absolute; */
   right: 7px;
   bottom: 7px;
   top: 7px;
@@ -10201,18 +10203,20 @@ background-image: url('../images/shapes/history-2-1.png');
   letter-spacing: 0px;
 }
 .product-details__excerpt {
-  color: #636363;
+  color: #000;
   font-size: 16px;
+  text-align: justify;
   font-style: normal;
   font-weight: 500;
   line-height: 162.5%;
   margin-bottom: 19px;
 }
 .product-details__color__title {
-  color: #788284;
+  color: #000;
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+text-transform: uppercase;
+  font-weight: 600;
   line-height: normal;
   font-family: var(--garlon-font, "Lato", sans-serif);
   margin-bottom: 8px;
@@ -10316,12 +10320,14 @@ background-image: url('../images/shapes/history-2-1.png');
 }
 .product-details__description__text {
   margin: 0;
+  color:#000;
+  text-align: justify;
 }
 .product-details__description__text + .product-details__description__lists {
   margin-top: 24px;
 }
 .product-details__description__lists {
-  max-width: 780px;
+  /* max-width: 780px; */
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -10338,7 +10344,7 @@ background-image: url('../images/shapes/history-2-1.png');
   align-items: start;
   justify-content: start;
   gap: 8px;
-  color: #636363;
+  color: #3a3838;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -18784,4 +18790,100 @@ svg {
   .franchise-wrapper {
     grid-template-columns: 1fr;
   }
+}
+
+
+
+    .footer-franchise-btn{
+    display: inline-block;
+    padding:22px;
+    border-radius: 30px;
+    background:#fff !important;
+    color: #000 !important;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(37,211,102,0.35);
+    transition: 0.3s;
+}
+
+
+
+
+
+
+.footer-cta__form__newsletter{
+    width:100%;
+}
+
+.footer-cta__form__newsletter .form-group__form{
+    display:flex;
+    /* flex-wrap:wrap; */
+    gap:12px;
+    align-items:center;
+    justify-content:center;
+}
+
+.footer-cta__form__newsletter input{
+    flex:1;
+    min-width:160px;
+    padding:12px 16px;
+    border-radius:40px;
+    border:1px solid White;
+    background:rgba(255,255,255,0.15);
+    /* color:#fff; */
+    font-size:14px;
+    outline:none;
+    transition:0.3s;
+}
+
+/* ===== Vertical Floating Buttons ===== */
+
+.floating-vertical{
+    position: fixed;
+    right: 16px;
+    top: 70%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 9999;
+}
+
+.v-btn{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transition: 0.3s ease;
+}
+
+.whatsapp-v{
+    background: linear-gradient(135deg,#25D366,#1ebe5d);
+}
+
+.call-v{
+    background: linear-gradient(135deg,#0d6efd,#0a58ca);
+}
+
+.v-btn:hover{
+    transform: scale(1.08);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    color:#fff;
+}
+
+/* Mobile bottom position */
+@media(max-width:576px){
+    .floating-vertical{
+        right: 14px;
+        bottom: 190px;
+        top: auto;
+        transform: none;
+    }
 }

@@ -87,7 +87,7 @@
                                         </div>
                                         <div class="main-header__list__content">
                                             <h5 class="main-header__list__title">Email - Us</h5>
-                                            <p class="main-header__list__link"><a href="mailto:garlon@envato.com">garlon@envato.com</a></p>
+                                            <p class="main-header__list__link"><a href="mailto:muthukumarshankaran@gmail.com">muthukumarshankaran@gmail.com</a></p>
                                         </div>
                                     </li>
                                     <li class="main-header__list__item">
@@ -96,7 +96,7 @@
                                         </div>
                                         <div class="main-header__list__content">
                                             <h5 class="main-header__list__title">Location</h5>
-                                            <p class="main-header__list__link">7/09 Mozilla Golden Street</p>
+                                            <p class="main-header__list__link">Tirunelveli</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -105,7 +105,7 @@
                                 </div><!-- /.main-header__btn -->
                                 <div class="main-header__info">
                                     <a href="javascript:void(0);" class="main-header__info__item search-toggler"><i class="icon-search"></i></a>
-                                    <a href="cart.html" class="main-header__info__item">
+                                    <a href="#" class="main-header__info__item">
                                         <i class="icon-torrly" aria-hidden="true"></i> <span class="main-header__info__number">02</span>
                                     </a><!-- /.search-toggler -->
                                 </div><!-- /.main-header__right__info -->
@@ -133,13 +133,9 @@
         </li>
 
         <!-- Products -->
-        <li class="dropdown">
+        <li>
             <a href="products.html">Products</a>
-            <ul>
-                <li><a href="products.html">All Products</a></li>
-                <li><a href="product-details.html">Product Detail</a></li>
-            </ul>
-        </li>
+                   </li>
 
         <!-- Partner With Us -->
         <li>
@@ -170,7 +166,7 @@
                             <div class="main-header__right">
                                 <div class="main-header__info">
                                     <a href="javascript:void(0);" class="main-header__info__item search-toggler"><i class="icon-search"></i></a>
-                                    <a href="cart.html" class="main-header__info__item">
+                                    <a class="main-header__info__item">
                                         <i class="icon-torrly" aria-hidden="true"></i> <span class="main-header__info__number">02</span>
                                     </a><!-- /.search-toggler -->
                                 </div><!-- /.main-header__right__info -->
@@ -197,26 +193,61 @@
             
                         <!-- Right Form -->
                         <div class="col-lg-6">
-                            <div class="hero-static__form">
-                                <h3 style="color: white;">Get in Touch</h3>
-                                <form class="contact-form">
-                                    <div class="mb-3">
-                                        <input type="text" placeholder="Your Name" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <input type="email" placeholder="Your Email" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <input type="text" placeholder="Phone Number">
-                                    </div>
-                                    <div class="mb-3">
-                                        <textarea placeholder="Your Message"></textarea>
-                                    </div>
-                                    <button type="submit" class="garlon-btn">
-                                        <span>Send Message</span>
-                                        <i class="icon-angle-small-right"></i>
-                                    </button>
-                                </form>
+                            <div class="hero-static__form ">
+                                <h3 style="color: white; text-align: center;">Get in Touch</h3>
+                                
+    <!-- Franchise Note -->
+    <div style="font-size:15px;color:#fff;margin-bottom:12px;text-align:center;">
+    <b>Franchise Available:</b> Start your own Herbal Franchise / Wellness Center with full support & branding.
+    </div>
+<form class="contact-form" 
+      action="https://formsubmit.co/muthukumarshankaran@gmail.com" 
+      method="POST">
+
+    <!-- FormSubmit Settings -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="thankyou.html">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" value="New Website Enquiry (Product / Franchise)">
+
+    <!-- Name -->
+    <div class="mb-3">
+        <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+        <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+
+    <!-- Phone -->
+    <div class="mb-3">
+        <input type="text" name="phone" placeholder="Phone Number">
+    </div>
+
+    <!-- Enquiry Type -->
+    <div class="mb-3">
+        <select name="enquiry_type" required style="width:100%;padding:12px;border-radius:8px;">
+            <option value="">Select Enquiry Type</option>
+            <option value="Product Enquiry">Product Enquiry</option>
+            <option value="Franchise Enquiry">Franchise Enquiry</option>
+            <option value="Bulk Order">Bulk / Wholesale Order</option>
+            <option value="General Enquiry">General Enquiry</option>
+        </select>
+    </div>
+
+    <!-- Message -->
+    <div class="mb-3">
+        <textarea name="message" placeholder="Your Message"></textarea>
+    </div>
+
+
+    <!-- Submit -->
+    <button type="submit" class="garlon-btn">
+        <span>Send Message</span>
+        <i class="icon-angle-small-right"></i>
+    </button>
+</form>
                             </div>
                         </div>
             
@@ -442,7 +473,7 @@
                         </a>
                         <div class="product__item__btn">
                             <a href="#"><i class="fas fa-share-alt"></i></a>
-                            <a href="cart.html"><i class="far fa-heart"></i></a>
+                            <a href="#"><i class="far fa-heart"></i></a>
                             <a href="products.html"><i class="fas fa-eye"></i></a>
                             <a href="#"><i class="fas fa-sync-alt"></i></a>
                         </div>
@@ -466,7 +497,7 @@
                          </a>
                         <div class="product__item__btn">
                             <a href="#"><i class="fas fa-share-alt"></i></a>
-                            <a href="cart.html"><i class="far fa-heart"></i></a>
+                            <a href="#"><i class="far fa-heart"></i></a>
                             <a href="products.html"><i class="fas fa-eye"></i></a>
                             <a href="#"><i class="fas fa-sync-alt"></i></a>
                         </div>
@@ -490,7 +521,7 @@
                          </a>
                         <div class="product__item__btn">
                             <a href="#"><i class="fas fa-share-alt"></i></a>
-                            <a href="cart.html"><i class="far fa-heart"></i></a>
+                            <a href="#"><i class="far fa-heart"></i></a>
                             <a href="products.html"><i class="fas fa-eye"></i></a>
                             <a href="#"><i class="fas fa-sync-alt"></i></a>
                         </div>
@@ -514,7 +545,7 @@
                          </a>
                         <div class="product__item__btn">
                             <a href="#"><i class="fas fa-share-alt"></i></a>
-                            <a href="cart.html"><i class="far fa-heart"></i></a>
+                            <a href="#"><i class="far fa-heart"></i></a>
                             <a href="products.html"><i class="fas fa-eye"></i></a>
                             <a href="#"><i class="fas fa-sync-alt"></i></a>
                         </div>
@@ -540,7 +571,7 @@
         <h2 class="ctm-title">Why We Exist</h2>
         <p>Thoughtfully made essentials inspired by Indian wisdom, <br>crafted for your modern rituals.</p>
       </div>
-      <a class="common_btn" href="/pages/about-us">About Us</a>
+      <a class="common_btn" href="about.html">About Us</a>
     </div>
 
     <!-- Scrollable Image Section -->
@@ -549,41 +580,41 @@
 
         <div class="scroll-content">
           <div class="scroll-item column-1">
-            <img src="//thegoodleaf.in/cdn/shop/files/Frame_2147225286.svg?v=1758341986" alt="">
-            <img src="//thegoodleaf.in/cdn/shop/files/1-2.png?v=1758013929" alt="">
-            <img src="//thegoodleaf.in/cdn/shop/files/1-3.png?v=1758013925" alt="">
+            <img src="assets/images/whychose/who1.svg" alt="" loading="lazy">
+            <img src="assets/images/whychose/who6.webp" alt="" loading="lazy">
+            <img src="assets/images/whychose/who11.avif" alt="" loading="lazy">
           </div>
         </div>
 
         <div class="scroll-content">
           <div class="scroll-item column-2">
-            <img src="//thegoodleaf.in/cdn/shop/files/2-1.png?v=1758013936" alt="">
-            <img src="//thegoodleaf.in/cdn/shop/files/about-new.svg?v=1758295865" alt="">
-            <img src="//thegoodleaf.in/cdn/shop/files/2-4.png?v=1758013922" alt="">
+            <img src="assets/images/whychose/who2.webp" alt="" loading="lazy">
+            <img src="assets/images/whychose/who7.svg" alt="" loading="lazy">
+            <img src="assets/images/whychose/who12.avif" alt="" loading="lazy">
           </div>
         </div>
 
         <div class="scroll-content">
           <div class="scroll-item column-3">
-            <img src="//thegoodleaf.in/cdn/shop/files/Frame_2147225474.svg?v=1758296140" alt="">
-            <img src="//thegoodleaf.in/cdn/shop/files/3-2_03ff6956-9c07-46ad-b9e5-cc9858de424e.png?v=1758013933" alt="">
-            <img src="//thegoodleaf.in/cdn/shop/files/Frame_2147225475.svg?v=1758296209" alt="">
+            <img src="assets/images/whychose/who3.svg" alt="" loading="lazy">
+            <img src="assets/images/whychose/who8.webp" alt="" loading="lazy">
+            <img src="assets/images/whychose/who13.svg" alt="" loading="lazy">
           </div>
         </div>
 
         <div class="scroll-content">
           <div class="scroll-item column-4">
-            <img src="//thegoodleaf.in/cdn/shop/files/4-1_7740ef64-ae50-4d25-9c05-6e9464a99601.png?v=1758013932" alt="">
-            <img src="//thegoodleaf.in/cdn/shop/files/Frame_2147225292_176b7766-2c34-406a-b1ee-ac775ba30d12.svg?v=1758296271" alt="">
-            <img src="//thegoodleaf.in/cdn/shop/files/4-3.png?v=1758013921" alt="">
+            <img src="assets/images/whychose/who4.webp" alt="" loading="lazy">
+            <img src="assets/images/whychose/who9.svg" alt="" loading="lazy">
+            <img src="assets/images/whychose/who14.avif" alt="" loading="lazy">
           </div>
         </div>
 
         <div class="scroll-content">
           <div class="scroll-item column-5">
-            <img src="//thegoodleaf.in/cdn/shop/files/5-1.png?v=1758013915" alt="">
-            <img src="//thegoodleaf.in/cdn/shop/files/5-2.png?v=1758013930" alt="">
-            <img src="//thegoodleaf.in/cdn/shop/files/Frame_2147225287.svg?v=1758341997" alt="">
+            <img src="assets/images/whychose/who5.avif" alt="" loading="lazy">
+            <img src="assets/images/whychose/who10.avif" alt="" loading="lazy">
+            <img src="assets/images/whychose/who15.svg" alt="" loading="lazy">
           </div>
         </div>
 
@@ -599,7 +630,7 @@
   <div class="container-lg">
 <div class="sec-title text-center">
     <div class="sec-title__tagline bw-split-in-up-fast">
-        <img src="assets/images/shapes/sec-title-shape.png" alt="charityglow">
+        <img src="assets/images/shapes/sec-title-shape.png" alt="charityglow" loading="lazy">
         SHOP BY WELLNESS GOALS
     </div>
     <h3 class="sec-title__title bw-split-in-up">
@@ -611,54 +642,54 @@
     <div class="category-grid">
 
       <a href="#" class="category-card">
-        <img src="assets/images/category/category1.jpg">
+        <img src="assets/images/category/category1.jpg" loading="lazy">
         <h4>Adaptogenic: Stress Busters </h4>
       </a>
 
       <a href="#" class="category-card">
-        <img src="assets/images/category/category2.jpg">
+        <img src="assets/images/category/category2.jpg" loading="lazy">
         <h4>Slimming & Energy </h4>
       </a>
 
       <a href="#" class="category-card">
-        <img src="assets/images/category/category3.jpg">
+        <img src="assets/images/category/category3.jpg" loading="lazy">
         <h4>Gut Health </h4>
       </a>
 
       <a href="#" class="category-card">
-        <img src="assets/images/category/category4.jpg">
+        <img src="assets/images/category/category4.jpg" loading="lazy">
         <h4>Liver Cleanse </h4>
       </a>
 
       <a href="#" class="category-card">
-        <img src="assets/images/category/category5.jpg">
+        <img src="assets/images/category/category5.jpg" loading="lazy">
         <h4>Lung Cleanse </h4>
       </a>
 
       <!-- Row 2 -->
 
       <a href="#" class="category-card">
-        <img src="assets/images/category/category6.jpg">
+        <img src="assets/images/category/category6.jpg" loading="lazy">
         <h4>Immunity Builders </h4>
       </a>
 
       <a href="#" class="category-card">
-        <img src="assets/images/category/category7.jpg">
+        <img src="assets/images/category/category7.jpg" loading="lazy">
         <h4>Skin & Hair </h4>
       </a>
 
       <a href="#" class="category-card">
-        <img src="assets/images/category/category8.jpg">
+        <img src="assets/images/category/category8.jpg" loading="lazy">
         <h4>Women Wellness </h4>
       </a>
 
       <a href="#" class="category-card">
-        <img src="assets/images/category/category9.jpg">
+        <img src="assets/images/category/category9.jpg" loading="lazy">
         <h4>Detox & Cleanse </h4>
       </a>
 
       <a href="#" class="category-card">
-        <img src="assets/images/category/category10.jpg">
+        <img src="assets/images/category/category10.jpg" loading="lazy">
         <h4>Herbal Teas for Fasting </h4>
       </a>
 
@@ -941,23 +972,35 @@
         <section class="footer-cta wow fadeInUp" data-wow-duration="1500ms">
             <div class="container">
                 <div class="footer-cta__inner">
-                    <div class="footer-cta__left">
-                        <div class="footer-cta__icon">
-                            <i class="icon-gardening-1"></i>
-                        </div><!-- /.footer-cta__icon -->
-                        <h4 class="footer-cta__text">Subscribe Your News <br> Latter Solutions?</h4><!-- /.footer-cta__text -->
-                    </div><!-- /.footer-cta__left -->
-                    <div class="footer-cta__right">
-                        <div class="footer-cta__form">
-                            <form action="#" data-url="MAILCHIMP_FORM_URL" class="footer-cta__form__newsletter mc-form">
-                                <div class="form-group__form">
-                                    <input type="email" name="EMAIL" placeholder="Email address">
-                                    <button type="submit" class="charityglow-btn">SEND REQUEST<span class="icon-paper-plane"></span></button>
-                                </div>
-                            </form>
-                            <div class="mc-form__response"></div>
-                        </div><!-- /.footer-cta__form -->
-                    </div><!-- /.footer-cta__left -->
+                    <div class="col-md-4">
+
+                        <div class="footer-cta__left">
+                            <div class="footer-cta__icon">
+                                <i class="icon-gardening-1"></i>
+                            </div><!-- /.footer-cta__icon -->
+                            <h4 class="footer-cta__text">Subscribe Your News <br> Latter Solutions?</h4><!-- /.footer-cta__text -->
+                        </div><!-- /.footer-cta__left -->
+                    </div>
+                    <div class="col-md-8">
+
+                        <div class="footer-cta__right">
+                            <div class="footer-cta__form">
+        <form id="franchiseForm" class="footer-cta__form__newsletter">
+        <div class="form-group__form">
+            <input type="text" id="franchiseName" placeholder="Your Name" required>
+            <input type="text" id="franchisePhone" placeholder="Phone Number" required>
+            <button type="submit">
+                FRANCHISE QUERY <span class="icon-paper-plane"></span>
+            </button>
+        </div>
+    </form>
+    
+    <div id="franchiseResponse" style="margin-top:10px;font-size:14px;"></div>
+                                <div id="franchiseResponse" style="margin-top:10px;font-size:14px;"></div>
+                                <!-- <div class="mc-form__response"></div> -->
+                            </div><!-- /.footer-cta__form -->
+                        </div><!-- /.footer-cta__left -->
+                    </div>
                 </div><!-- /.footer-cta__inner -->
             </div><!-- /.container -->
         </section><!-- /.footer-cta -->
@@ -991,26 +1034,7 @@ Dr. Herbi is rooted in natural wellness, offering thoughtfully crafted herbal an
                                 </div><!-- /.social-links -->
                             </div><!-- /.footer-widget -->
                         </div><!-- /.col-md-6 -->
-                        <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="100ms">
-                            <div class="footer-widget footer-widget--links">
-                                <h2 class="footer-widget__title">Our Service</h2><!-- /.footer-widget__title -->
-                                <ul class="list-unstyled footer-widget__links">
-                                    <li><i class="fas fa-circle"></i><a href="#">Dynamic</a></li>
-                                    <li><i class="fas fa-circle"></i><a href="team.html">Team</a></li>
-                                    <li><i class="fas fa-circle"></i><a href="contact.html">Contact</a></li>
-                                    <li><i class="fas fa-circle"></i><a href="about.html">About</a></li>
-                                    <li><i class="fas fa-circle"></i><a href="faq.html">Faq</a></li>
-                                    <li><i class="fas fa-circle"></i><a href="about.html">Video</a></li>
-                                    <li><i class="fas fa-circle"></i><a href="faq.html">Fancy</a></li>
-                                    <li><i class="fas fa-circle"></i><a href="gallery.html">Gallery</a></li>
-                                    <li><i class="fas fa-circle"></i><a href="contact.html">Maps</a></li>
-                                    <li><i class="fas fa-circle"></i><a href="blog-details.html">Brand</a></li>
-                                    <li><i class="fas fa-circle"></i><a href="services.html">Service </a></li>
-                                    <li><i class="fas fa-circle"></i><a href="blog-grid-left.html">Blog</a></li>
-
-                                </ul><!-- /.list-unstyled footer-widget__links -->
-                            </div><!-- /.footer-widget -->
-                        </div><!-- /.col-md-6 -->
+                  
                         <div class="col-md-6 col-lg-4 col-xl-2 wow fadeInUp" data-wow-delay="100ms">
                             <div class="footer-widget footer-widget--links-two">
                                 <h2 class="footer-widget__title">Quick Link</h2><!-- /.footer-widget__title -->
@@ -1021,6 +1045,23 @@ Dr. Herbi is rooted in natural wellness, offering thoughtfully crafted herbal an
                                     <li><a href="gallery.html">Our Gallery</a></li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="contact.html">Contact</a></li>
+                                </ul><!-- /.list-unstyled footer-widget__links -->
+                            </div><!-- /.footer-widget -->
+                        </div><!-- /.col-md-6 -->
+                              <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="100ms">
+                            <div class="footer-widget footer-widget--links-two">
+                                <h2 class="footer-widget__title">Franchise Partner</h2><!-- /.footer-widget__title -->
+                                <ul class="list-unstyled footer-widget__links-two">
+                                    <li><i class="fas fa-circle"></i><a><span> 100% Herbal</span></a></li>
+                                    <li><i class="fas fa-circle"></i><a><span> Quality Tested</span></a></li>
+                                    <li><i class="fas fa-circle"></i><a><span> Traditional Formulas</span></a></li>
+                                    <li><i class="fas fa-circle"></i><a> Made in India</a></li>
+<li><a href="https://wa.me/917010497563?text=Hello%2C%20I%20am%20interested%20in%20starting%20a%20Herbal%20Franchise.%0A%0A%F0%9F%91%A4%20Name%3A%20%0A%F0%9F%93%9E%20Phone%3A%20%0A%0APlease%20share%3A%0A%E2%9C%94%20Franchise%20model%0A%E2%9C%94%20Investment%20details%0A%E2%9C%94%20Profit%20margins%0A%E2%9C%94%20Area%20availability%0A%E2%9C%94%20Support%20system"
+target="_blank" class="footer-franchise-btn">
+    Apply for Franchise
+</a></li>
+
+
                                 </ul><!-- /.list-unstyled footer-widget__links -->
                             </div><!-- /.footer-widget -->
                         </div><!-- /.col-md-6 -->
@@ -1049,7 +1090,7 @@ Dr. Herbi is rooted in natural wellness, offering thoughtfully crafted herbal an
 
                                         </div>
                                         <div class="footer-widget--post__content">
-                                            <h3 class="footer-widget--post__title">                <a href="tel:+919XXXXXXXXX">+91 9XXXXXXXXX</a>
+                                            <h3 class="footer-widget--post__title">                <a href="tel:+917010497563">+91 7010497563</a>
 </h3>
                                         </div>
                                     </li>
@@ -1059,7 +1100,7 @@ Dr. Herbi is rooted in natural wellness, offering thoughtfully crafted herbal an
 
                                         </div>
                                         <div class="footer-widget--post__content">
-                                            <h3 class="footer-widget--post__title">                <a href="mailto:info@sriaadhiya.com">info@sriaadhiya.com</a>
+                                            <h3 class="footer-widget--post__title">                <a href="mailto:muthukumarshankaran@gmail.com">muthukumarshankaran@gmail.com</a>
 </h3>
                                         </div>
                                     </li>
@@ -1072,7 +1113,7 @@ Dr. Herbi is rooted in natural wellness, offering thoughtfully crafted herbal an
             <div class="main-footer__bottom  wow fadeInUp" data-wow-delay="00ms">
                 <div class="container">
                     <div class="main-footer__bottom__inner">
-                        <p class="main-footer__copyright"> &copy; Copyright <span class="dynamic-year"></span> by TechMayon</p>
+                        <p class="main-footer__copyright"> &copy; Copyright <span class="dynamic-year">2026</span> by <a href="https://www.techmayon.com/" style="color: #fff;">TechMayon</a> </p>
                     </div><!-- /.main-footer__inner -->
                 </div><!-- /.container -->
             </div><!-- /.main-footer__bottom -->
@@ -1092,11 +1133,11 @@ Dr. Herbi is rooted in natural wellness, offering thoughtfully crafted herbal an
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@garlon.com">needhelp@garlon.com</a>
+                    <a href="mailto:muthukumarshankaran@gmail.com">muthukumarshankaran@gmail.com</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a href="tel:+917010497563">+91 7010497563</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__social">
@@ -1118,10 +1159,29 @@ Dr. Herbi is rooted in natural wellness, offering thoughtfully crafted herbal an
         </div>
     </div>
 
+<div class="floating-vertical">
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/917010497563?text=Hello%2C%20I%20am%20interested%20in%20your%20Herbal%20products%20and%20franchise.%0A%0APlease%20share%20details."
+       target="_blank"
+       class="v-btn whatsapp-v"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Call -->
+    <a href="tel:+917010497563"
+       class="v-btn call-v"
+       aria-label="Call Now">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+</div>
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
         <span class="scroll-to-top__text">back top</span>
         <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
     </a>
+
 
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -1193,6 +1253,44 @@ Dr. Herbi is rooted in natural wellness, offering thoughtfully crafted herbal an
 <script src="assets/js/garlon.js"></script>
 <script src="assets/js/custom.js"></script>
 <script>
+document.getElementById("franchiseForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const name = document.getElementById("franchiseName").value.trim();
+    const phone = document.getElementById("franchisePhone").value.trim();
+    const responseBox = document.getElementById("franchiseResponse");
+
+    if(!name || !phone){
+        responseBox.innerHTML = "❌ Please fill all details.";
+        responseBox.style.color = "red";
+        return;
+    }
+
+    const whatsappNumber = "917010497563"; // +91 70104 97563
+
+    const message = `Hello, I am interested in starting a Herbal Franchise.
+
+👤 Name: ${name}
+📞 Phone: ${phone}
+
+Please share:
+✔ Franchise model
+✔ Investment details
+✔ Profit margins
+✔ Area availability
+✔ Support system`;
+
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+
+    responseBox.innerHTML = "✅ Redirecting to WhatsApp...";
+    responseBox.style.color = "lightgreen";
+
+    document.getElementById("franchiseForm").reset();
+});
+</script>
+<script>
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".franchise-content").style.opacity = "0";
     setTimeout(() => {
@@ -1201,6 +1299,7 @@ Dr. Herbi is rooted in natural wellness, offering thoughtfully crafted herbal an
     }, 300);
   });
 </script>
+
 
 
 
